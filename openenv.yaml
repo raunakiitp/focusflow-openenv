@@ -1,0 +1,24 @@
+name: focusflow_env
+version: 1.0
+
+observation_space:
+  type: object
+  properties:
+    energy:
+      type: integer
+    focus:
+      type: integer
+    stress:
+      type: integer
+    progress:
+      type: integer
+
+action_space:
+  type: string
+  enum:
+    - deep_work
+    - light_work
+    - take_break
+    - scroll_social_media
+    - block_distractions
+    - switch_task

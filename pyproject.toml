@@ -1,0 +1,26 @@
+[project]
+name = "focusflow-env"
+version = "0.1.0"
+description = "FocusFlow OpenEnv environment"
+authors = [
+  { name = "Raunak Yadav", email = "yadavraunak2004@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+
+dependencies = [
+  "pydantic",
+  "fastapi",
+  "uvicorn",
+  "openai"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["env", "tasks"]
+
+[tool.setuptools.package-dir]
+"" = "."
