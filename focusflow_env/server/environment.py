@@ -1,6 +1,6 @@
 import random
 from typing import Tuple, Dict, Any
-from .models import Observation, Action
+from ..models import Observation, Action
 
 class FocusEnv:
     def __init__(self, difficulty: str = "hard"):
