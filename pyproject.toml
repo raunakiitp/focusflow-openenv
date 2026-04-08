@@ -8,6 +8,7 @@ dependencies = [
   "pydantic",
   "fastapi",
   "uvicorn",
+  "openai",
 ]
 
 [build-system]
