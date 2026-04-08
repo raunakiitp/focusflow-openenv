@@ -2,13 +2,13 @@
 name = "focusflow-env"
 version = "0.1.0"
 description = "FocusFlow OpenEnv environment"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 dependencies = [
-  "openenv-core",
-  "pydantic",
-  "fastapi",
-  "uvicorn",
-  "openai",
+  "openenv-core>=0.1.0",
+  "pydantic>=2.0",
+  "fastapi>=0.100.0",
+  "uvicorn[standard]>=0.20.0",
+  "openai>=1.0.0",
 ]
 
 [build-system]
@@ -17,3 +17,4 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 where = ["."]
+include = ["server*"]
