@@ -1,1 +1,1 @@
-from .models import Action, Observation
+# FocusFlow OpenEnv Environment

@@ -12,9 +12,9 @@ class Observation(BaseModel):
     done: bool = False
 
 class State(BaseModel):
-    energy: int
-    focus: int
-    stress: int
-    progress: int
+    energy: int = 100
+    focus: int = 80
+    stress: int = 20
+    progress: int = 0
     step: int = 0
     done: bool = False
