@@ -3,4 +3,4 @@ name: focusflow_env
 type: rl
 runtime: docker
 app: server.app:app
-port: 7860
+port: 8000
