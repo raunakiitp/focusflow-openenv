@@ -2,14 +2,14 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Install uv
-RUN pip install uv openenv-core
+RUN pip install --no-cache-dir uv
 
-# Copy the whole repo
-COPY . /app
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Install dependencies
-RUN pip install -r server/requirements.txt || pip install fastapi uvicorn pydantic openenv-core openai
+COPY . .
+
+RUN pip install --no-cache-dir openenv-core fastapi uvicorn pydantic openai
 
 ENV PYTHONPATH="/app:$PYTHONPATH"
 

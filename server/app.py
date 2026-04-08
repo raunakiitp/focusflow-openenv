@@ -4,8 +4,13 @@ try:
 except ImportError:
     from models import Action, Observation
 try:
-    from .focusflow_environment import FocusFlowEnvironment
+    from .environment import FocusFlowEnvironment
 except ImportError:
-    from focusflow_environment import FocusFlowEnvironment
+    from environment import FocusFlowEnvironment
 
-app = create_app(FocusFlowEnvironment, Action, Observation, env_name="focusflow_env")
+app = create_app(
+    FocusFlowEnvironment,
+    Action,
+    Observation,
+    env_name="focusflow_env"
+)
