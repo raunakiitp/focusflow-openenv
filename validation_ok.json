@@ -1,0 +1,1 @@
+{"stdout": "[OK] focusflow-env: Ready for multi-mode deployment\n\nSupported deployment modes:\n  [YES] docker\n  [YES] openenv_serve\n  [YES] uv_run\n  [YES] python_module\n\nUsage examples:\n  cd focusflow-env && uv run server\n  cd focusflow-env && openenv build\n  cd focusflow-env && openenv push\n", "stderr": ""}

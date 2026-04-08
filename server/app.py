@@ -1,4 +1,6 @@
+import uvicorn
 from openenv import create_app
+
 try:
     from ..models import Action, Observation
 except ImportError:
@@ -14,3 +16,9 @@ app = create_app(
     Observation,
     env_name="focusflow_env"
 )
+
+def main():
+    uvicorn.run("server.app:app", host="0.0.0.0", port=8000)
+
+if __name__ == "__main__":
+    main()
