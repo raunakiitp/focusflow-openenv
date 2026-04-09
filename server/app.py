@@ -1,21 +1,12 @@
-import uvicorn
 from openenv import create_app
-
 try:
-    from focusflow_openenv.models import Action, Observation
+    from ..models import Action, Observation
 except ImportError:
-    try:
-        from ..models import Action, Observation
-    except ImportError:
-        from models import Action, Observation
-
+    from models import Action, Observation
 try:
-    from focusflow_openenv.server.environment import FocusFlowEnvironment
+    from .environment import FocusFlowEnvironment
 except ImportError:
-    try:
-        from .environment import FocusFlowEnvironment
-    except ImportError:
-        from environment import FocusFlowEnvironment
+    from environment import FocusFlowEnvironment
 
 app = create_app(
     FocusFlowEnvironment,
@@ -26,7 +17,7 @@ app = create_app(
 
 def main():
     import uvicorn
-    uvicorn.run("server.app:app", host="0.0.0.0", port=7860)
+    uvicorn.run(app, host="0.0.0.0", port=7860)
 
 if __name__ == "__main__":
     main()
