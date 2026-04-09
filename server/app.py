@@ -1,8 +1,10 @@
 from openenv import create_app
+
 try:
     from ..models import Action, Observation
 except ImportError:
     from models import Action, Observation
+
 try:
     from .environment import FocusFlowEnvironment
 except ImportError:
